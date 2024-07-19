@@ -35,11 +35,11 @@ The project is organized into the following folders:
 
 for starting the project follow the below instruction
 
-use node js version 20
+Use node js version 20
 
 Run npm start
 
-run npm run dev
+Run npm run dev
 
 This will serve the project in localhost:3000
 
