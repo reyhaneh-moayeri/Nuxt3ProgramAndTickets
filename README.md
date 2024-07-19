@@ -33,7 +33,7 @@ The project is organized into the following folders:
 
 - **server**: Contains the `data.json` file from which data is fetched.
 
-for starting the project follow the below instruction
+For starting the project follow the below instruction
 
 Use node js version 20
 
@@ -51,7 +51,7 @@ the assets folder contains styles images and icons, the styles parts into slices
 
 There are some reusable components which is used throw the project the button which is used in eventcards and not found page. the select filter which is the select box customized for the project, event card which is use to show each eveng and also empty state where there is no event matches with filter found. and also spinner
 
-the models folder is where the type of response and each event is defined
+The models folder is where the type of response and each event is defined
 
 The pages are related to routes, for this project there is only one and default route which is showing all the events available and also a dynamic route for all other routes entered to show the not found page
 
