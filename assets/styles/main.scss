@@ -1,0 +1,17 @@
+@import "variables";
+@import "fonts";
+@import "mixins";
+
+// reset
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
