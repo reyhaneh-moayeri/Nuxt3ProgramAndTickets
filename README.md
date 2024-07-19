@@ -1,6 +1,6 @@
 # Nuxt 3 Program and Tickets Test task
 
-## This is a project maintained by Nuxt 3. The project will be served on `http://localhost:3000`.
+#### This is a project maintained by Nuxt 3. The project will be served on `http://localhost:3000`.
 
 For an overview of the project, visit [Nuxt 3 Program and Tickets](https://nuxt3-program-and-tickets.vercel.app/).
 
