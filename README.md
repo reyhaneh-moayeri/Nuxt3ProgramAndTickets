@@ -56,3 +56,23 @@ The models folder is where the type of response and each event is defined
 The pages are related to routes, for this project there is only one and default route which is showing all the events available and also a dynamic route for all other routes entered to show the not found page
 
 The data is fetched from data.json which is located in serve folder.
+
+### Updates
+
+- In the latest commits, the project has been updated with the following changes:
+
+- The index.vue page has been split into two components: Filter, which contains the location and category Filters.vue, and Events.vue, which contains the list of events. These files are located in the container folder, which contains reusable components inside.
+
+- A utils folder has been added that contains utility functions to avoid duplicated code. For example, generateOptions generates locationOptions and categoryOptions, and getUniqueValues can be used to get unique values in a list throughout the project.
+
+- Pinia and the persist module have been added to the project. The filters are persisted to prevent loss upon page refresh. Additionally, I have added a cart slice that handles the add-to-cart functionality and persists the cart data. This was not mentioned but I did it on my own initiative.
+
+- A font size variable has been added to the Sass variables to handle font sizes.
+
+- Layout padding and style improvements have been made.
+
+- NuxtLink has been used instead of vue-router to navigate to the home route.
+
+- I have added some comments to the project to describe what is happening. However, I personally believe that too many comments can make the project messy.
+
+Lastly, thank you for reviewing the project.
