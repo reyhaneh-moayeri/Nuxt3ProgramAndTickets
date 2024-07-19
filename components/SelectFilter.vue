@@ -101,7 +101,7 @@ onUnmounted(() => {
 
 .selected-option {
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: get-font-size("md");
   border: none;
   border-bottom: 1px solid $blackColor;
   background-color: $whiteColor;
@@ -109,7 +109,7 @@ onUnmounted(() => {
   font-weight: 500;
   min-height: 36px;
   @include breakpoint("small") {
-    font-size: 14px;
+    font-size: get-font-size("xs");
   }
 }
 
@@ -145,7 +145,7 @@ onUnmounted(() => {
   cursor: pointer;
   padding: 12px 32px;
   @include breakpoint("small") {
-    font-size: 14px;
+    font-size: get-font-size("sm");
     padding: 8px 16px;
   }
 

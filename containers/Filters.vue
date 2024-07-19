@@ -32,6 +32,7 @@ const categoryOptions = computed(() => {
 .filters-container {
   display: flex;
   gap: 20px;
+  padding-bottom: 32px;
 
   div {
     width: 180px;

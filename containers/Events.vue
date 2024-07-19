@@ -9,7 +9,7 @@
   >
     <EmptyState />
   </div>
-  <div v-else ref="eventsList">
+  <div v-else ref="eventsList" class="events-list">
     <EventCard
       v-for="event in filteredEvents"
       :key="event.id"
@@ -77,5 +77,15 @@ onMounted(async () => {
   margin-top: 100px;
   flex-direction: column;
   justify-content: center;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include breakpoint("small") {
+    gap: 24px;
+  }
 }
 </style>

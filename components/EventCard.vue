@@ -70,8 +70,7 @@ const formattedTime = computed(() => {
 
 <style scoped lang="scss">
 .event-card {
-  padding: 20px;
-  margin: 10px;
+  padding-bottom: 32px;
   border-radius: 8px;
   display: flex;
 
@@ -82,7 +81,7 @@ const formattedTime = computed(() => {
 
   h3 {
     margin-top: 0;
-    font-size: 48px;
+    font-size: get-font-size("xxxl");
   }
 
   p {
@@ -92,7 +91,7 @@ const formattedTime = computed(() => {
 
 .event-date {
   padding-right: 32px;
-  font-size: 18px;
+  font-size: get-font-size("lg");
 
   &-day,
   &-time {
@@ -103,30 +102,34 @@ const formattedTime = computed(() => {
     display: flex;
     gap: 4px;
   }
+
+  @include breakpoint("small") {
+    font-size: get-font-size("md");
+  }
 }
 
 .event-category {
   background: $blackColor;
   display: inline;
   color: $whiteColor;
-  font-size: 14px;
+  font-size: get-font-size("sm");
   padding: 4px;
 
   @include breakpoint("small") {
-    font-size: 14px;
+    font-size: get-font-size("sm");
   }
 }
 
 .event-title-description {
   margin: 8px 0;
 
-  @include breakpoint("small") {
+  @include breakpoint("large") {
     h3 {
       font-size: 32px;
     }
 
     p {
-      font-size: 24px;
+      font-size: get-font-size("xl");
     }
   }
 }
@@ -137,7 +140,7 @@ const formattedTime = computed(() => {
 
 .event-location {
   @include breakpoint("small") {
-    font-size: 16px;
+    font-size: get-font-size("md");
   }
 }
 
@@ -160,7 +163,7 @@ const formattedTime = computed(() => {
   border-radius: 50%;
   background-color: $blackColor;
   color: $whiteColor;
-  font-size: 18px;
+  font-size: get-font-size("lg");
 
   @include breakpoint("large") {
     width: 30px;

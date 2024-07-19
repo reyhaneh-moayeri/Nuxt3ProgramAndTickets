@@ -6,9 +6,10 @@
 
 <style lang="scss" scoped>
 .main-layout {
-  padding: 128px 160px;
-  @include breakpoint("large") {
-    padding: 88px 16px;
+  padding: 0 160px;
+  margin: auto;
+  @include breakpoint("xlarge") {
+    padding: 0 16px;
   }
 }
 </style>

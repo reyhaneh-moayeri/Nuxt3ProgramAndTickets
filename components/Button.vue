@@ -26,14 +26,19 @@ defineProps({
 .button {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 16px 24px;
   border: none;
   cursor: pointer;
   background-color: $blackColor;
   color: $whiteColor;
-  font-size: 18px;
+  font-size: get-font-size("lg");
   white-space: nowrap;
   font-family: $font-family;
+
+  @include breakpoint("large") {
+    font-size: get-font-size("md");
+    padding: 8px 16px;
+  }
 
   &-icon {
     width: 24px;

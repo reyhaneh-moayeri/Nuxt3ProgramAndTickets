@@ -12,11 +12,12 @@ import Events from "~/containers/Events.vue";
 
 <style scoped lang="scss">
 h1 {
-  margin-bottom: 32px;
-  font-size: 60px;
+  font-size: get-font-size("xxxxl");
+  padding: 128px 0px 32px 0px;
 
   @include breakpoint("large") {
     font-size: 40px;
+    padding: 88px 0px 24px 0px;
   }
 }
 </style>

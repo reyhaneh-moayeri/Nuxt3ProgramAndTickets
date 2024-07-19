@@ -3,7 +3,7 @@
     <img src="~assets/images/notFount.svg" alt="No events found" />
 
     <NuxtLink to="/">
-      <Button label="Back Home" @click="backHome" class="button" />
+      <Button label="Back Home" class="button" />
     </NuxtLink>
   </div>
 </template>
