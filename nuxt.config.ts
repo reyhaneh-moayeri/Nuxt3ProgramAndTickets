@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "dayjs-nuxt",
     "@nuxt/test-utils/module",
+    "@pinia-plugin-persistedstate/nuxt",
   ],
   css: ["@/assets/styles/main.scss"],
   vite: {

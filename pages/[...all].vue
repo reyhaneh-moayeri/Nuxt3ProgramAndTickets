@@ -1,17 +1,12 @@
 <template>
   <div class="not-found">
     <img src="~assets/images/notFount.svg" alt="No events found" />
-    <Button label="Back Home" @click="backHome" class="button" />
+
+    <NuxtLink to="/">
+      <Button label="Back Home" @click="backHome" class="button" />
+    </NuxtLink>
   </div>
 </template>
-
-<script setup>
-const router = useRouter();
-
-const backHome = () => {
-  router.push("/");
-};
-</script>
 
 <style scoped lang="scss">
 .not-found {

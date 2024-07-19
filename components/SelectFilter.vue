@@ -107,6 +107,7 @@ onUnmounted(() => {
   background-color: $whiteColor;
   position: relative;
   font-weight: 500;
+  min-height: 36px;
   @include breakpoint("small") {
     font-size: 14px;
   }
