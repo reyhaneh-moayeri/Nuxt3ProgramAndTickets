@@ -1,21 +1,6 @@
-# Nuxt 3 Program and Tickets Test Task
-
-## Project Overview
-
-This project is maintained using Nuxt 3.
-
-### Instructions to Start the Project
-
-1. Ensure you are using Node.js version 20.
-2. Run the following commands:
-   ```sh
-   npm start
-   npm run dev
-   ```
-
 # Nuxt 3 Program and Tickets Test task
 
-## This is a project maintained by Nuxt 31. The project will be served on `http://localhost:3000`.
+## This is a project maintained by Nuxt 3. The project will be served on `http://localhost:3000`.
 
 For an overview of the project, visit [Nuxt 3 Program and Tickets](https://nuxt3-program-and-tickets.vercel.app/).
 
