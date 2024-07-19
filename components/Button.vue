@@ -1,5 +1,5 @@
 <template>
-  <button class="button" @click="$emit('click')">
+  <button class="button">
     <span v-if="label" class="button-label">{{ label }}</span>
     <template v-if="icon">
       <img :src="icon" />
@@ -33,11 +33,12 @@ defineProps({
   color: $whiteColor;
   font-size: 18px;
   white-space: nowrap;
-}
+  font-family: $font-family;
 
-.button-icon {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+  &-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
 }
 </style>

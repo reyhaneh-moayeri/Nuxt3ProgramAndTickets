@@ -25,6 +25,7 @@ import gsap from "gsap";
 const filterStore = useFilterStore();
 const optionStore = useOptionsStore();
 
+// ref for adding animation to each card
 const eventsList = ref<HTMLElement | null>(null);
 
 const filteredEvents = computed(() => {

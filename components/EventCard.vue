@@ -17,7 +17,16 @@
     </div>
 
     <div class="event-action">
-      <Button label="Buy tickets" :icon="shopIcon" />
+      <div>
+        <div v-if="eventCount > 0" class="counter-container">
+          <button class="circle-button" @click="removeFromCart">-</button>
+          <span class="count">{{ eventCount }}</span>
+          <button class="circle-button" @click="addToCart">+</button>
+        </div>
+        <template v-else>
+          <Button @click="addToCart" label="Buy tickets" :icon="shopIcon" />
+        </template>
+      </div>
       <p>{{ event.price }}€</p>
     </div>
   </div>
@@ -26,6 +35,12 @@
 <script setup lang="ts">
 const dayjs = useDayjs();
 import shopIcon from "~/assets/icons/shop.svg";
+import { useCartStore } from "~/stores/cart";
+
+const cartStore = useCartStore();
+
+const isSelected = computed(() => cartStore.getEventCount(props.event.id) > 0);
+const eventCount = computed(() => cartStore.getEventCount(props.event.id));
 
 const props = defineProps({
   event: {
@@ -33,6 +48,14 @@ const props = defineProps({
     required: true,
   },
 });
+
+function addToCart() {
+  cartStore.addEventToCart(props.event.id);
+}
+
+function removeFromCart() {
+  cartStore.removeEventFromCart(props.event.id);
+}
 
 const formattedDate = computed(() => {
   const day = dayjs(props.event.date).format("ddd");
@@ -126,6 +149,33 @@ const formattedTime = computed(() => {
 
   @include breakpoint("large") {
     align-items: flex-start;
+  }
+}
+
+.circle-button {
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $blackColor;
+  color: $whiteColor;
+  font-size: 18px;
+
+  @include breakpoint("large") {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  & .count {
+    font-size: 24px;
+    font-weight: 500;
   }
 }
 </style>

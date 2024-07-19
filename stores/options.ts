@@ -26,7 +26,7 @@ export const useOptionsStore = defineStore(
         const res: EventsResponseModel = await response.json();
         events.value = res.events;
 
-        // get the unique locations and category for dropdown filter
+        // Get the unique locations and category for dropdown filter
         locations.value = getUniqueValues(res.events, "location");
         categories.value = getUniqueValues(res.events, "category");
       } catch (err) {

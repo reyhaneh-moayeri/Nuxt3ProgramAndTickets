@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
 
+  routeRules: {
+    // Homepage pre-rendered at build time
+    "/": { prerender: true },
+  },
+
   modules: [
     "@vueuse/nuxt",
     "@pinia/nuxt",
