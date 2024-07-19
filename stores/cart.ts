@@ -22,12 +22,6 @@ export const useCartStore = defineStore(
           delete selectedEvents.value[eventId];
         }
       }
-      console.log(
-        "Event removed:",
-        eventId,
-        "Count:",
-        selectedEvents.value[eventId]
-      );
     }
 
     function getEventCount(eventId: number) {

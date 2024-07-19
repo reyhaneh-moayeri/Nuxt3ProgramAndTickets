@@ -19,9 +19,9 @@
     <div class="event-action">
       <div>
         <div v-if="eventCount > 0" class="counter-container">
-          <button class="circle-button" @click="removeFromCart">-</button>
+          <button class="event-action-button" @click="removeFromCart">-</button>
           <span class="count">{{ eventCount }}</span>
-          <button class="circle-button" @click="addToCart">+</button>
+          <button class="event-action-button" @click="addToCart">+</button>
         </div>
         <template v-else>
           <Button @click="addToCart" label="Buy tickets" :icon="shopIcon" />
@@ -155,7 +155,7 @@ const formattedTime = computed(() => {
   }
 }
 
-.circle-button {
+.event-action-button {
   border: none;
   outline: none;
   width: 40px;
@@ -175,6 +175,10 @@ const formattedTime = computed(() => {
   display: flex;
   align-items: center;
   gap: 8px;
+
+  & .event-action-button {
+    cursor: pointer;
+  }
 
   & .count {
     font-size: 24px;
