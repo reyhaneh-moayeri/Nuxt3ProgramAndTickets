@@ -9,7 +9,7 @@
       <span class="arrow"></span>
     </div>
     <div v-if="isDropdownOpen" class="options-container">
-      <div class="option-item" @click="resetSelection">
+      <div class="option-item" @click="selectOption('')">
         {{ label }}
       </div>
       <div
@@ -65,13 +65,6 @@ const selectOption = (value: string) => {
   selectedOption.value = value;
   emit("update:modelValue", value);
   emit("change", value);
-  isDropdownOpen.value = false;
-};
-
-const resetSelection = () => {
-  selectedOption.value = "";
-  emit("update:modelValue", "");
-  emit("change", "");
   isDropdownOpen.value = false;
 };
 
