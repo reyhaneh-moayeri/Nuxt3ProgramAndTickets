@@ -74,7 +74,7 @@ onMounted(async () => {
 .empty-state {
   display: flex;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 30px;
   flex-direction: column;
   justify-content: center;
 }

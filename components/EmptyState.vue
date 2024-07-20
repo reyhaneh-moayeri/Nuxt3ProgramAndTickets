@@ -13,8 +13,18 @@
   }
 
   p {
-    margin-top: 24px;
+    margin-top: get-font-size("xl");
     font-weight: 700;
+  }
+
+  @include breakpoint("small") {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    p {
+      font-weight: 500;
+    }
   }
 }
 </style>
